@@ -1,0 +1,39 @@
+Table: employees
+
+This table stores basic information about employees, such as name, email, phone, and address.
+Fields: id (primary key), name, email, phone, address, created_at, updated_at.
+
+Table: departments
+
+This table stores information about the departments within the organization.
+Fields: id (primary key), name, description, created_at, updated_at.
+
+Table: positions
+
+This table stores information about the positions within the organization.
+Fields: id (primary key), name, description, created_at, updated_at.
+
+Table: employee_positions
+
+This table stores the mapping between employees and their current position in the organization.
+Fields: id (primary key), employee_id (foreign key to employees table), position_id (foreign key to positions table), start_date, end_date, created_at, updated_at.
+
+Table: employee_departments
+
+This table stores the mapping between employees and the departments they belong to.
+Fields: id (primary key), employee_id (foreign key to employees table), department_id (foreign key to departments table), start_date, end_date, created_at, updated_at.
+
+Table: salaries
+
+This table stores information about the salaries of employees.
+Fields: id (primary key), employee_id (foreign key to employees table), amount, currency, start_date, end_date, created_at, updated_at.
+
+Table: time_entries
+
+This table stores information about the hours worked by employees.
+Fields: id (primary key), employee_id (foreign key to employees table), date, hours_worked, created_at, updated_at.
+
+Table: performance_reviews
+
+This table stores information about performance reviews for employees.
+Fields: id (primary key), employee_id (foreign key to employees table), reviewer_id, date, comments, rating, created_at, updated_at.
